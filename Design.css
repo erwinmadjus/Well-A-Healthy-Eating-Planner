@@ -10,9 +10,15 @@
 }
 
 body {
-    background: #9FE2BF;
-    margin: 0;
-    font-family: "Source-Sans-Pro";
+        background-color: #9FE2BF; 
+		background-size: cover;
+		background-position: center center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100vh;
+		font-family: 'Barlow', sans-serif;
+		margin: 0;
 }
 
 button {
@@ -43,3 +49,16 @@ button {
     width: 600px;
     max-width: 100%;
 }
+
+body 
+	{
+        background-color: #9FE2BF;
+		background-size: cover;
+		background-position: center center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100vh;
+		font-family: 'Barlow', sans-serif;
+		margin: 0;
+	}
