@@ -25,7 +25,7 @@ button {
 
     padding: 24px 24px;
     border-radius: 50px;
-    color: #9FE2BF;
+    color: #FFFFFF;
     display: inline-block;
     font-weight: bold;
     font-size: 18px;
@@ -42,7 +42,7 @@ button {
 }
 
 .quiz-section {
-    background-color: #fff;
+    background-color: #9FE2BF;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     overflow: hidden;
@@ -58,8 +58,9 @@ button {
 
 body 
 	{
-        background-color: #9FE2BF;
+        background-color: #fff;
 		background-size: cover;
+        color: white;
 		background-position: center center;
 		display: flex;
 		flex-direction: column;
@@ -83,6 +84,7 @@ body
 
 body {
     background-color: #9fe2bf;
+    color: white;
 }
 
 ul {
@@ -152,4 +154,32 @@ a {
 
 .welcome-button {
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.plate {
+    padding-top: 2%;
+    width: 30%;
+    float: left;
+    display: flex;
+}
+
+.info {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-size: 20px;
 }
