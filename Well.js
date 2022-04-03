@@ -88,7 +88,8 @@ const dietData = [
     },
   //https://www.health.harvard.edu/blog/nutritional-psychiatry-your-brain-on-food-201511168626
   ];
-
+  const quizBox = document.getElementById("quiz_section");
+  const theAnswers = document.querySelectorAll(".answer");
   const theQuestion = document.getElementById('question');
   const choice_a = document.getElementById('choice_a');
   const choice_b = document.getElementById('choice_b');
@@ -97,10 +98,13 @@ const dietData = [
   const nextButton = document.getElementById('next');
 
   let currentQuestion = 0;
+  let score = 0;
 
   setQuiz();
 
   function setQuiz() {
+
+    removeChoices(); 
     const currentQuizQuestion = dietData[currentQuestion];
     theQuestion.innerText = currentQuizQuestion.question;
     choice_a.innerText = currentQuizQuestion.a;
@@ -109,15 +113,46 @@ const dietData = [
     choice_d.innerText = currentQuizQuestion.d;
   }
 
-  nextButton.addEventListener("click", function(){
+  function checkAnswers() {
+    let answer = undefined;
+
+    theAnswers.forEach((theAnswer) => {
+        if (theAnswer.checked) {
+            answer = theAnswer.id;
+        }
+    });
+
+    return answer;
+}
+
+  function removeChoices() {
+    theAnswers.forEach((theAnswer) => {
+        theAnswer.checked = false;
+    });
+}
+
+
+  nextButton.addEventListener("click", () => {
+
+    const answer = checkAnswers();
+
+    if (answer) {
+        if (answer === dietData[currentQuestion].correct) {
+            score++;
+        }
     currentQuestion++;
     
     if(currentQuestion < dietData.length) {
         setQuiz();
     } else {
-        
+        quiz_section.innerHTML = `
+                <h2>${score}/${dietData.length}</h2>
+            `;
+    }
     }
   }); 
+
+
 
 
 
