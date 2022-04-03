@@ -145,8 +145,25 @@ const dietData = [
     if(currentQuestion < dietData.length) {
         setQuiz();
     } else {
-        quiz_section.innerHTML = `
+
+      if(score <= 3) {
+        quiz_section.innerHTML =         
+          `
                 <h2>${score}/${dietData.length}</h2>
+                <h1>You need diet 1. </h1>
+            `;
+      } else if (score > 3 && score <= 7){
+        quiz_section.innerHTML =         
+          `
+                <h2>${score}/${dietData.length}</h2>
+                <h1>You need diet 2. </h1>
+            `;
+      } else 
+      quiz_section.innerHTML =         
+          `
+                <h2>${score}/${dietData.length}</h2>
+
+                <h1>You need diet 3. </h1>
             `;
     }
     }
