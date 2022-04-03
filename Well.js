@@ -131,7 +131,6 @@ const dietData = [
     });
 }
 
-
   nextButton.addEventListener("click", () => {
 
     const answer = checkAnswers();
@@ -146,13 +145,10 @@ const dietData = [
         setQuiz();
     } else {
         quiz_section.innerHTML = `
-                <h2>Your score is: ${score}/${dietData.length}.</h2>
-                
-                <button onclick="location.reload()">Reload</button>
-            `;
-    }
-    }
-  }); 
+                <h2>Your score is: ${score}/${dietData.length}.</h2>`;
+              }
+      }
+    }); 
 
 
 
