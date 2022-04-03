@@ -116,9 +116,9 @@ const dietData = [
   function checkAnswers() {
     let answer = undefined;
 
-    theAnswers.forEach((theAnswer) => {
-        if (theAnswer.checked) {
-            answer = theAnswer.id;
+    theAnswers.forEach((theAnswers) => {
+        if (theAnswers.checked) {
+            answer = theAnswers.id;
         }
     });
 
@@ -126,8 +126,8 @@ const dietData = [
 }
 
   function removeChoices() {
-    theAnswers.forEach((theAnswer) => {
-        theAnswer.checked = false;
+    theAnswers.forEach((theAnswers) => {
+        theAnswers.checked = false;
     });
 }
 
@@ -145,25 +145,10 @@ const dietData = [
     if(currentQuestion < dietData.length) {
         setQuiz();
     } else {
-
-      if(score <= 3) {
-        quiz_section.innerHTML =         
-          `
-                <h2>${score}/${dietData.length}</h2>
-                <h1>You need diet 1. </h1>
-            `;
-      } else if (score > 3 && score <= 7){
-        quiz_section.innerHTML =         
-          `
-                <h2>${score}/${dietData.length}</h2>
-                <h1>You need diet 2. </h1>
-            `;
-      } else 
-      quiz_section.innerHTML =         
-          `
-                <h2>${score}/${dietData.length}</h2>
-
-                <h1>You need diet 3. </h1>
+        quiz_section.innerHTML = `
+                <h2>Your score is: ${score}/${dietData.length}.</h2>
+                
+                <button onclick="location.reload()">Reload</button>
             `;
     }
     }
