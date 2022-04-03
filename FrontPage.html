@@ -16,55 +16,55 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;1,300;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
-
-        <header>
-            <div class = "wrapper">
-                <nav>
-                    <div class = "logo">Well.</div>
+        <div class = "quiz-section" id="quiz">
+            <div class = "middle">
+                <h2 id="question">Question text</h2>
                 <ul>
-                    <li>
-                        <a href = "#">A</a>
-                    </li>
-                    <li>
-                        <a href = "#">B</a>
-                    </li>
-                    <li>
-                        <a href = "#">C</a>
-                    </li>
-                    <li>
-                        <a href = "#" class = "btn">D</a>
-                    </li>
-                    <li>
-                        <a href = "#" class = "btn">Submit</a>
-                    </li>
-                </ul>
-
-                </nav>
-
-                <div class = "quiz-section" id="quiz">
-                    <div class = "left">
-                        <h2 id="question">Question text</h2>
-                        <button id="submit">Submit</button>
+                            <li>
+                                <input 
+                                    type="radio"
+                                    id = "a"
+                                    name = "answer"
+                                    class = "answer"
+                                />
+                                <label id="choice_a" for="a">Question</label>
+                            </li>
+                            <li>
+                                <input 
+                                    type="radio"
+                                    id = "b"
+                                    name = "answer"
+                                    class = "answer"
+                                />
+                                <label id="choice_b" for="b">Question</label>
+                            </li>
+                            <li>
+                                <input 
+                                    type="radio"
+                                    id = "c"
+                                    name = "answer"
+                                    class = "answer"
+                                />
+                                <label id="choice_c" for="c">Question</label>
+                            </li>
+                            <li>
+                                <input 
+                                    type="radio"
+                                    id = "d"
+                                    name = "answer"
+                                    class = "answer"
+                                />
+                                <label id="choice_d" for="d">Question</label>
+                            </li>
+                        </ul>
                     </div>
-                    <div class = "right">
-                        <button id="a">AnswerA</button>
-                        <button id="a">AnswerB</button>
-                        <button id="a">AnswerC</button>
-                        <button id="a">AnswerD</button>
-                    </div>
-                </div>
+                         <button id="next">Next</button>
+                        </div>
+                        <script src="Well.js" defer></script>
+                    </body>
+                </html>
 
 
-
-
-            </div>            
-        </header>
-
-       
-
-        <script src="Well.js" defer></script>
-    </body> 
-</html>
 
 
 

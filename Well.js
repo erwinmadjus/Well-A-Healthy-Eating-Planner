@@ -85,37 +85,40 @@ const dietData = [
     c: "-",
     d: "-",
     correct: "a",
-    }
+    },
   //https://www.health.harvard.edu/blog/nutritional-psychiatry-your-brain-on-food-201511168626
   ];
 
-  const quiz = document.getElementById("quiz");
-  const answerEls = document.querySelectorAll(".answer");
-  const theQuestion = document.getElementById("question");
+  const theQuestion = document.getElementById('question');
   const choice_a = document.getElementById('choice_a');
   const choice_b = document.getElementById('choice_b');
   const choice_c = document.getElementById('choice_c');
   const choice_d = document.getElementById('choice_d');
-  const nextButton = document.getElementById("next");
+  const nextButton = document.getElementById('next');
 
-  let currentQuestion = 0; // Initialized the question counter to change from one to question to the next
-  let score = 0;  // Initialized the Score counter 
+  let currentQuestion = 0;
 
   setQuiz();
 
   function setQuiz() {
-    const currentQuestionSet = quizSet[currentQuestion];
-    
-    theQuestion.innerText = currentQuestionSet.question;
-    choice_a.innerText = currentQuestionSet.a;
-    choice_b.innerText = currentQuestionSet.b;
-    choice_c.innerText = currentQuestionSet.c;
-    choice_d.innerText = currentQuestionSet.d;
-
-    currentQuestion++;
+    const currentQuizQuestion = dietData[currentQuestion];
+    theQuestion.innerText = currentQuizQuestion.question;
+    choice_a.innerText = currentQuizQuestion.a;
+    choice_b.innerText = currentQuizQuestion.b;
+    choice_c.innerText = currentQuizQuestion.c;
+    choice_d.innerText = currentQuizQuestion.d;
   }
 
+  nextButton.addEventListener("click", function(){
+    currentQuestion++;
     
+    if(currentQuestion < dietData.length) {
+        setQuiz();
+    } else {
+        
+    }
+  }); 
+
 
 
 
