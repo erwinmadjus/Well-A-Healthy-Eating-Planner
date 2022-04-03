@@ -1,0 +1,72 @@
+body {
+    background-color: #9fe2bf;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+
+li {
+    float: right;
+}
+
+a {
+    display: block;
+    padding: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-size: 20px;
+  }
+
+  nav{
+    flex: 1;
+    padding-left: 800px;
+}
+
+.home-screen {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 69px;
+    padding-bottom: 0px;
+}
+
+.overlap {
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+}
+
+.intro-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.navbar{
+    width: 100%;
+    height: 5vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-button {
+    font-family: 'Source Sans Pro', sans-serif;
+}
